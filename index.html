@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Say Raiography | Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">   
 </head>
 
 <body>
@@ -33,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="second-body bodies" id="second-body-here">
+    <div class="second-body bodies reveal">
         <h1>Heading Text</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet debitis reprehenderit laboriosam modi
             tempore tempora temporibus, dolor nihil nobis veniam. Quidem accusantium consectetur, soluta optio illum
@@ -47,6 +44,27 @@
             eum quae dolores et earum dignissimos voluptatibus modi inventore sequi temporibus. Ut, ad iusto ullam rerum
             eligendi consequuntur quasi mollitia rem vitae.</p>
     </div>
+    <script>
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i=0; i<reveals.length; i++){
+                
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint=150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }
+                else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
     <footer>Trail_Blazers @2023</footer>
 </body>
 
