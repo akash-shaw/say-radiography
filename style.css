@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* font-family: 'Poppins', sans-serif; */
   font-family: sans-serif;
 }
 body {
@@ -61,11 +62,13 @@ nav {
   justify-content: center;
   margin: 0px 0px 0px 10vw;
 }
+
+
 .container-text h1 {
-  /* border: 2px solid cyan; */
   margin: 0px 0px 5vw 0px;
   font-size: 4em;
 }
+
 .container-text p {
   /* border: 2px solid green; */
   font-size: 1.5em;

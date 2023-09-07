@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* font-family: 'Poppins', sans-serif; */
   font-family: sans-serif;
 }
 body {
@@ -9,8 +10,8 @@ body {
   background-color: rgb(0, 0, 0);
   overflow: hidden;
   height: 100vh;
-}
 
+}
 
 #blob {
   height: 80vh;
@@ -26,15 +27,14 @@ body {
   z-index: -1;
 }
 
-@keyframes rotate-blob{
-  from{
-      rotate: 0deg;
+@keyframes rotate-blob {
+  from {
+    rotate: 0deg;
   }
-  to{
-      rotate: 360deg;
+  to {
+    rotate: 360deg;
   }
 }
-
 
 header {
   top: 0;
@@ -80,40 +80,40 @@ nav {
 }
 
 .center-container {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid blue;
-    padding: 25px;
-    border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  padding: 25px;
+  border-radius: 25px;
 }
 
 .drag-n-drop-box {
-    color: white;
-    border: 2px solid cyan;
-    height: 250px;
-    width: 400px;
-    margin: 0px 0px 25px 0px;
-    border-style: dashed;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: white;
+  border: 2px solid cyan;
+  height: 250px;
+  width: 400px;
+  margin: 0px 0px 25px 0px;
+  border-style: dashed;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.buttons-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid yellow;
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid yellow;
 }
 .buttons {
-    border: 2px solid rgb(255, 111, 0);
-    color: white;
-    height: 50px;
-    width: 120px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 2px solid rgb(255, 111, 0);
+  color: white;
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
