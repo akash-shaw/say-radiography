@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Radiography | Scan</title>
+    <link rel="stylesheet" href="scan_style.css">
+</head>
+<body>
+    <div id="blur"></div>
+    <div id="blob" ></div>
+    <script>
+        const blob = document.getElementById("blob");
+        document.body.onpointermove = event => {
+            const { clientX, clientY } = event;
+            blob.animate({
+                left: `${clientX}px`,
+                top: `${clientY}px`
+            }, {duration: 3000, fill: "forwards"})
+        }      
+    </script>
+    <header>
+        <nav>
+            <div class="navbar-links" type="button" onclick="location='index.html'">Home</div>
+            <div class="navbar-links" type="button" onclick="location='#'">Scan</div>
+        </nav>
+    </header>
+    <div class="main-container">    
+        <div class="center-container">
+            <div class="drag-n-drop-box">Drop files here</div>
+            <div class="buttons-container">
+                <div class="buttons b-ctscan">CT Scan</div>
+                <div class="buttons b-xray">X-Ray</div>
+                <div class="buttons b-usg">Ultrasound</div>
+            </div>
+        </div>
+    </div>
+    <footer>Trail_Blazers @2023</footer>
+</body>
+</html>
