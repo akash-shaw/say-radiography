@@ -82,11 +82,23 @@ nav {
 
 .typing-wrapper {
   margin: 0px 0px 5vw 0px;
-  height: 100px;
+  height: 78px;
+  /* border: 2px solid blue; */
 }
 
 .typing-text {
   font-size: 4em;
+  width: fit-content;
+  border-right: 4px solid white;
+  padding-right: 2px;
+  animation: blink 0.5s step-end infinite alternate;
+  /* border: 2px solid red; */
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
 .container-text p {
