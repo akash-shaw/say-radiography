@@ -24,10 +24,12 @@
                     <script> //typewriter effect
                         let title = document.querySelector('.typing-text');
                         const text = ["Radiology!","CT Scans!", "X-Rays!", "Ultrasonography!"];
+                        console.log(text.length);
                         let index = 0;
                         let i =0;
                         let increasing = true;
                         const typewriter = () => {
+                            console.log(i);
                             let new_title = text[i].slice(0, index);
                             title.innerText = new_title;
                             if (increasing) {
@@ -39,9 +41,15 @@
                                 index--;
                                 if (index <= 0) {
                                     increasing = true;
+                                    if(i<(text.length-1)){
+                                        i++;
+                                    }
+                                    else{
+                                        i=0;
+                                    }
                                 }
                             }
-                            setTimeout(() => typewriter(), 500)
+                            setTimeout(() => typewriter(), 200);
                         }
                         typewriter();
                     </script>
