@@ -18,15 +18,42 @@
         </header>
         <div class="first-body-center-container">
             <div class="container-text">
-                <h1>Empowering<br>Radiologists!</h1>
+                <h1 class="fixed-text">Empowering</h1>
+                <div class="typing-wrapper">
+                    <h1 class="typing-text"></h1>
+                    <script> //typewriter effect
+                        let title = document.querySelector('.typing-text');
+                        const text = ["Radiology!","CT Scans!", "X-Rays!", "Ultrasonography!"];
+                        let index = 0;
+                        let i =0;
+                        let increasing = true;
+                        const typewriter = () => {
+                            let new_title = text[i].slice(0, index);
+                            title.innerText = new_title;
+                            if (increasing) {
+                                index++;
+                                if (index >= text[i].length) {
+                                    increasing = false;
+                                }
+                            } else {
+                                index--;
+                                if (index <= 0) {
+                                    increasing = true;
+                                }
+                            }
+                            setTimeout(() => typewriter(), 500)
+                        }
+                        typewriter();
+                    </script>
+                </div>
                 <p>A State of the Art deep learning model for<br>denoising CT Scans</p>
                 <div class="get-started-button" onclick="scrollByViewportHeight()">Get Started</div>
-                <script>
+
+                <script>// Scroll window by 100vh
                     function scrollByViewportHeight() {
-                      // Scroll the window by 100vh
-                      window.scrollTo(0, window.scrollY + window.innerHeight);
+                        window.scrollTo(0, window.scrollY + window.innerHeight);
                     }
-                  </script>
+                </script>
             </div>
         </div>
     </div>
@@ -44,22 +71,22 @@
             eum quae dolores et earum dignissimos voluptatibus modi inventore sequi temporibus. Ut, ad iusto ullam rerum
             eligendi consequuntur quasi mollitia rem vitae.</p>
     </div>
-    <script>
+    <script> //reveal on scroll
         window.addEventListener('scroll', reveal);
 
-        function reveal(){
+        function reveal() {
             var reveals = document.querySelectorAll('.reveal');
 
-            for(var i=0; i<reveals.length; i++){
-                
+            for (var i = 0; i < reveals.length; i++) {
+
                 var windowheight = window.innerHeight;
                 var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint=150;
+                var revealpoint = 150;
 
-                if(revealtop < windowheight - revealpoint){
+                if (revealtop < windowheight - revealpoint) {
                     reveals[i].classList.add('active');
                 }
-                else{
+                else {
                     reveals[i].classList.remove('active');
                 }
             }

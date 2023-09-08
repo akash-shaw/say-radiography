@@ -51,7 +51,7 @@ nav {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 .reveal.active {
@@ -76,9 +76,16 @@ nav {
   margin: 0px 0px 0px 10vw;
 }
 
+.fixed-text {
+  font-size: 4em;
+}
 
-.container-text h1 {
+.typing-wrapper {
   margin: 0px 0px 5vw 0px;
+  height: 100px;
+}
+
+.typing-text {
   font-size: 4em;
 }
 

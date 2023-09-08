@@ -114,6 +114,7 @@ nav {
   background-color: rgb(255, 255, 255, 0.8);
   color: rgb(0, 0, 0, 0.9);
   transition: all 0.15s;
+  cursor: pointer;
 }
 .select-files-b:hover {
   background-color: rgb(255, 255, 255);
@@ -135,6 +136,7 @@ nav {
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .buttons:hover{
   background-color: rgb(255, 255, 255, 0.75);
