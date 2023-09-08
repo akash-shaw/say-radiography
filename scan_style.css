@@ -45,7 +45,7 @@ header {
   display: flex;
   justify-content: right;
   /* position: fixed; */
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
 }
 nav {
   filter: none;
@@ -75,23 +75,24 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   height: calc(85vh - 4rem);
 }
 
 .center-container {
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
+  border: 1px solid grey;
+  background-color: rgb(128, 128, 128, 0.2);
   padding: 25px;
   border-radius: 25px;
 }
 
 .drag-n-drop-box {
   color: white;
-  border: 2px solid cyan;
-  height: 250px;
-  width: 400px;
+  border: 1px solid white;
+  height: 300px;
+  width: 500px;
   margin: 0px 0px 25px 0px;
   border-style: dashed;
   border-radius: 25px;
@@ -99,14 +100,18 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.fa-cloud-arrow-up {
+  font-size: 50px;
+  color: rgb(255, 255, 255, 0.5);
+}
 .buttons-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 .buttons {
-  border: 2px solid rgb(255, 111, 0);
+  border: 2px solid rgb(128, 128, 128);
   color: white;
   height: 50px;
   width: 120px;
