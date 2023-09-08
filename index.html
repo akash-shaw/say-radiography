@@ -21,34 +21,49 @@
                 <h1 class="fixed-text">Empowering</h1>
                 <div class="typing-wrapper">
                     <h1 class="typing-text"></h1>
-                    <script> //typewriter effect
+                    <script> //Typewriter effect
                         let title = document.querySelector('.typing-text');
                         const text = ["Radiology!", "CT Scans!", "X-Rays!", "Ultrasonography!"];
                         let index = 0;
                         let i = 0;
                         let increasing = true;
+
                         const typewriter = () => {
                             let new_title = text[i].slice(0, index);
                             title.innerText = new_title;
+
                             if (increasing) {
-                                index++;
-                                if (index >= text[i].length) {
+                                if (index < text[i].length) {
+                                    index++;
+                                    setTimeout(() => {
+                                        typewriter();
+                                    }, 100); //Forward typing speed
+                                } else {
                                     increasing = false;
+                                    setTimeout(() => {
+                                        typewriter();
+                                    }, 2000); //Delay between typing and erasing
                                 }
                             } else {
-                                index--;
-                                if (index <= 0) {
+                                if (index > 0) {
+                                    index--;
+                                    setTimeout(() => {
+                                        typewriter();
+                                    }, 50); //Erasing speed
+                                } else {
                                     increasing = true;
                                     if (i < (text.length - 1)) {
                                         i++;
-                                    }
-                                    else {
+                                    } else {
                                         i = 0;
                                     }
+                                    setTimeout(() => {
+                                        typewriter();
+                                    }, 500); //Delay between two phrases
                                 }
                             }
-                            setTimeout(() => typewriter(), 300);
                         }
+
                         typewriter();
                     </script>
                 </div>
@@ -77,7 +92,7 @@
             eum quae dolores et earum dignissimos voluptatibus modi inventore sequi temporibus. Ut, ad iusto ullam rerum
             eligendi consequuntur quasi mollitia rem vitae.</p>
     </div>
-    <script> //reveal on scroll
+    <script> //Reveal on scroll
         window.addEventListener('scroll', reveal);
 
         function reveal() {
