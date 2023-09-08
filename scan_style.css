@@ -90,19 +90,34 @@ nav {
 
 .drag-n-drop-box {
   color: white;
-  border: 1px solid white;
+  border: 2px solid rgb(255, 255, 255, 0.6);
   height: 300px;
   width: 500px;
   margin: 0px 0px 25px 0px;
-  border-style: dashed;
+  border-style: dashed ;
   border-radius: 25px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .fa-cloud-arrow-up {
   font-size: 50px;
   color: rgb(255, 255, 255, 0.5);
+}
+.select-files-b {
+  /* border: 2px solid rgb(255, 255, 255, 0.5); */
+  width: fit-content;
+  padding: 10px 20px 10px 20px;
+  border-radius: 6px;
+  margin: 20px 20px 10px 20px;
+  background-color: rgb(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0, 0.9);
+  transition: all 0.15s;
+}
+.select-files-b:hover {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.1s;
 }
 .buttons-container {
   display: flex;
@@ -111,7 +126,7 @@ nav {
   /* border: 2px solid yellow; */
 }
 .buttons {
-  border: 2px solid rgb(128, 128, 128);
+  border: 2px solid rgb(255, 255, 255, 0.5);
   color: white;
   height: 50px;
   width: 120px;
@@ -119,6 +134,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
+}
+.buttons:hover{
+  background-color: rgb(255, 255, 255, 0.75);
+  color: rgb(0, 0, 0, 0.8 );
+  transition: all 0.4s;
 }
 
 footer {
