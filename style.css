@@ -34,6 +34,7 @@ nav {
 }
 .navbar-links {
   color: white;
+  font-size: 1.2em;
   /* border: 2px solid red; */
   margin: 10px;
   padding: 5px;
@@ -41,11 +42,18 @@ nav {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-}
-.navbar-links:hover {
   cursor: pointer;
-  text-decoration: underline;
 }
+
+.navbar-links:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px rgb(255, 255, 255);
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.navbar-links:hover:after { transform: scaleX(1); }
+.navbar-links:after{ transform-origin:0% 50%; }
 
 .reveal{
   position: relative;
@@ -124,7 +132,7 @@ html {
 }
 
 
-.second-body {
+#second-body {
   height: 85vh;
   color: white;
   display: flex;
@@ -132,11 +140,11 @@ html {
   justify-content: center;
   align-items: center;
 }
-.second-body h1 {
+#second-body h1 {
   text-align: center;
   margin: 50px;
 }
-.second-body p{
+#second-body p{
   max-width: 800px;
   text-align: center;
 }

@@ -58,6 +58,7 @@ nav {
 }
 .navbar-links {
   color: white;
+  font-size: 1.2em;
   /* border: 2px solid red; */
   margin: 10px;
   padding: 5px;
@@ -65,11 +66,17 @@ nav {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-}
-.navbar-links:hover {
   cursor: pointer;
-  text-decoration: underline;
 }
+.navbar-links:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px rgb(255, 255, 255);
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.navbar-links:hover:after { transform: scaleX(1); }
+.navbar-links:after{ transform-origin:0% 50%; }
 
 .main-container {
   display: flex;
