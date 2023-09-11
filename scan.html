@@ -7,10 +7,11 @@
     <title>Say Radiography | Scan</title>
     <link rel="stylesheet" href="scan_style.css">
     <script src="https://kit.fontawesome.com/eea82aea31.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div id="blob" ></div>
+    <div id="blob" class="blob"></div>
     <script>
         const blob = document.getElementById("blob");
         document.body.onpointermove = event => {
@@ -35,9 +36,9 @@
                 <p style="color: rgb(255, 255, 255, 0.7);">or drag here</p>
             </div>
             <div class="buttons-container">
-                <div id="bt-ctscan" class="buttons" onclick="clickHighlight(this);">CT Scan</div>
-                <div id="bt-xray" class="buttons" onclick="clickHighlight(this);">X-Ray</div>
-                <div id="bt-uts" class="buttons" onclick="clickHighlight(this);">Ultrasound</div>
+                <div id="bt-ctscan" class="buttons" onclick="clickHighlight(this); //changeBlobColor(this.id)">CT Scan</div>
+                <div id="bt-xray" class="buttons" onclick="clickHighlight(this); //changeBlobColor(this.id)">X-Ray</div>
+                <div id="bt-uts" class="buttons" onclick="clickHighlight(this); //changeBlobColor(this.id)">Ultrasound</div>
             </div>
             
             <script>
@@ -52,6 +53,18 @@
                     resetAllButtons();
                     button.style.backgroundColor = "rgb(255, 255, 255, 0.75)";
                     button.style.color = "rgb(0, 0, 0, 0.8)";
+                }
+                function changeBlobColor(id){
+                    if(id=="bt-ctscan"){
+                    document.getElementById("blob").style.background = "linear-gradient(to right, red, blue)";
+                    console.log("yes");
+                    }
+                    if(id=="bt-xray"){
+                    document.getElementById("blob").style.background = "linear-gradient(to right, yellow, orange)";
+                    }
+                    if(id=="bt-uts"){
+                    document.getElementById("blob").style.background = "linear-gradient(to right, green, cyan)";
+                    }
                 }
             </script>
             

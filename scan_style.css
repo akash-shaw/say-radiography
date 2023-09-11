@@ -25,6 +25,7 @@ body {
   animation: rotate-blob 15s infinite;
   filter: blur(250px);
   z-index: -1;
+  transition: all 0.2s;
 }
 
 @keyframes rotate-blob {
