@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family: 'Poppins', sans-serif; */
   font-family: sans-serif;
 }
 body {
@@ -25,7 +24,6 @@ body {
   animation: rotate-blob 15s infinite;
   filter: blur(250px);
   z-index: -1;
-  transition: all 0.2s;
 }
 
 @keyframes rotate-blob {
@@ -46,7 +44,6 @@ header {
   display: flex;
   justify-content: right;
   /* position: fixed; */
-  /* border: 2px solid pink; */
 }
 nav {
   filter: none;
@@ -54,13 +51,11 @@ nav {
   display: flex;
   justify-content: right;
   align-items: center;
-  /* border: 2px solid blue; */
   margin-right: 5vw;
 }
 .navbar-links {
   color: white;
   font-size: 1.2em;
-  /* border: 2px solid red; */
   margin: 10px;
   padding: 5px;
   height: 20%;
@@ -83,7 +78,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
   height: calc(85vh - 4rem);
 }
 
@@ -114,7 +108,6 @@ nav {
   color: rgb(255, 255, 255, 0.5);
 }
 .select-files-b {
-  /* border: 2px solid rgb(255, 255, 255, 0.5); */
   width: fit-content;
   padding: 10px 20px 10px 20px;
   border-radius: 6px;
@@ -131,8 +124,6 @@ nav {
 .buttons-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* border: 2px solid yellow; */
 }
 .buttons {
   border: 2px solid rgb(255, 255, 255, 0.5);
